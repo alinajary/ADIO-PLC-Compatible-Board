@@ -1,0 +1,48 @@
+RAM Allocation [bytes]
+Variable                                                                          Address   Size
+------------------------------------------------------------------------------------------------
+requ_buffer                                                                       0x2400      14
+rx_buffer_usartf0                                                                 0x240E      64
+rx_rd_index_usartf0                                                               0x244E       1
+rx_counter_usartf0                                                                0x244F       1
+tx_buffer_usartf0                                                                 0x2450      64
+tx_wr_index_usartf0                                                               0x2490       1
+tx_rd_index_usartf0                                                               0x2491       1
+tx_counter_usartf0                                                                0x2492       1
+
+EEPROM Allocation [bytes]
+Variable                                                                          Address   Size
+------------------------------------------------------------------------------------------------
+
+Register Allocation
+Variable                                                                          Register  Size
+------------------------------------------------------------------------------------------------
+DAQ_data                                                                          R2,R3        2
+start_byte                                                                        R5           1
+stop_byte                                                                         R4           1
+flag                                                                              R6,R7        2
+data_recieved                                                                     R8,R9        2
+packet_start                                                                      R10,R11      2
+DAC_data                                                                          R12,R13      2
+rx_buffer_overflow_usartf0                                                        GPIO0.0  1bit
+
+FLASH Allocation [words]
+Function                                                                          Address   Size
+------------------------------------------------------------------------------------------------
+system_clocks_init                                                                0x0013F     47
+event_system_init                                                                 0x0016E     56
+ports_init                                                                        0x001A6    211
+vports_init                                                                       0x00279      7
+usartf0_init                                                                      0x00280     25
+usartf0_rx_isr                                                                    0x00299     72
+usartf0_tx_isr                                                                    0x002E1     37
+putchar                                                                           0x00306     44
+dacb_init                                                                         0x00332     18
+dacb_write                                                                        0x00344     32
+tc0_disable                                                                       0x00364     10
+tcc0_init                                                                         0x0036E    100
+read_calibration_byte                                                             0x003D2     15
+adca_init                                                                         0x003E1     63
+adcb_init                                                                         0x0042E     62
+adcb_read                                                                         0x0046C     25
+main                                                                              0x00485    279
